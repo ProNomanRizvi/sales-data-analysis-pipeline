@@ -1,0 +1,19 @@
+# Raw data - not tracked, download separately
+data/raw/*.csv
+data/processed/*.csv
+
+# Keep folder structure visible in git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Database files
+database/*.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
