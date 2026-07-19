@@ -1,8 +1,8 @@
-## Dataset
+## Dataset Setup
 
-This project uses the [Superstore Sales Dataset](https://www.kaggle.com/datasets/...) from Kaggle.
+This project uses the **Superstore Sales Dataset** from Kaggle.
 
-**Setup:**
-1. Download `train.csv` from the link above
-2. Place it in `data/raw/superstore_sales.csv`
-3. Run `python3 src/load_to_sql.py`
+1. Download the dataset from Kaggle (search "superstore sales dataset")
+2. Rename the file to `superstore_sales.csv`
+3. Place it inside `data/raw/`
+4. Run the pipeline: `python3 src/load_to_sql.py`
