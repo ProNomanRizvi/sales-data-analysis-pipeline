@@ -29,10 +29,8 @@ def analyze_sales_data(csv_path):
     # Monthly Revenue
     # ==================================================
 
-    # Create month column
     df["order_month"] = df["Order Date"].dt.to_period("M")
 
-    # Calculate monthly revenue
     monthly_revenue = (
         df.groupby("order_month")["Sales"]
         .sum()
@@ -76,10 +74,49 @@ def analyze_sales_data(csv_path):
 
     sales = df["Sales"].values
 
+    mean_sales = np.mean(sales)
+    median_sales = np.median(sales)
+    std_sales = np.std(sales)
+
     print("\n========== SALES STATISTICS ==========")
-    print(f"Mean   : {np.mean(sales):.2f}")
-    print(f"Median : {np.median(sales):.2f}")
-    print(f"Std Dev: {np.std(sales):.2f}")
+    print(f"Mean   : {mean_sales:.2f}")
+    print(f"Median : {median_sales:.2f}")
+    print(f"Std Dev: {std_sales:.2f}")
+
+# ==================================================
+# Summary Results
+# ==================================================
+
+    total_revenue = df["Sales"].sum()
+    average_sale = mean_sales
+
+    # Total rows in the dataset
+    total_rows = len(df)
+
+    # Total unique orders
+    total_orders = df["Order ID"].nunique()
+
+    top_product = top_products.index[0]
+    best_month = monthly_revenue.idxmax()
+
+    print("\n========== ORDER SUMMARY ==========")
+    print(f"Total Rows   : {total_rows}")
+    print(f"Total Orders : {total_orders}")
+
+    return {
+    "total_revenue": total_revenue,
+    "average_sale": average_sale,
+    "total_rows": total_rows,
+    "total_orders": total_orders,
+    "top_product": top_product,
+    "best_month": str(best_month),
+    "monthly_revenue": monthly_revenue,
+    "growth_rate": growth_rate,
+    "top_products": top_products,
+    "mean": mean_sales,
+    "median": median_sales,
+    "std": std_sales,
+    }
 
 
 if __name__ == "__main__":
@@ -98,4 +135,4 @@ if __name__ == "__main__":
         "clean_sales.csv"
     )
 
-    analyze_sales_data(csv_path)
+    results = analyze_sales_data(csv_path)

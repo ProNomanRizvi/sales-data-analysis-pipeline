@@ -1,0 +1,78 @@
+SALES ANALYSIS REPORT
+==============================
+
+Total Revenue : 2261536.78
+Average Sale  : 230.77
+Total Orders  : 4922
+Top Product   : Canon imageCLASS 2200 Advanced Copier
+Best Month    : 2018-11
+
+Sales Statistics
+----------------
+Mean   : 230.77
+Median : 54.49
+Std Dev: 626.62
+
+Top 10 Products
+---------------
+Canon imageCLASS 2200 Advanced Copier : 61599.82
+Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind : 27453.38
+Cisco TelePresence System EX90 Videoconferencing Unit : 22638.48
+HON 5400 Series Task Chairs for Big and Tall : 21870.58
+GBC DocuBind TL300 Electric Binding System : 19823.48
+GBC Ibimaster 500 Manual ProClick Binding System : 19024.50
+Hewlett Packard LaserJet 3310 Copier : 18839.69
+HP Designjet T520 Inkjet Large Format Printer - 24" Color : 18374.90
+GBC DocuBind P400 Electric Binding System : 17965.07
+High Speed Automatic Electric Letter Opener : 17030.31
+
+Monthly Revenue
+---------------
+2015-01 : 14205.71
+2015-02 : 4519.89
+2015-03 : 55205.80
+2015-04 : 27906.85
+2015-05 : 23644.30
+2015-06 : 34322.94
+2015-07 : 33781.54
+2015-08 : 27117.54
+2015-09 : 81623.53
+2015-10 : 31453.39
+2015-11 : 77907.66
+2015-12 : 68167.06
+2016-01 : 18066.96
+2016-02 : 11951.41
+2016-03 : 32339.32
+2016-04 : 34154.47
+2016-05 : 29959.53
+2016-06 : 23599.37
+2016-07 : 28608.26
+2016-08 : 36818.34
+2016-09 : 63133.61
+2016-10 : 31011.74
+2016-11 : 75249.40
+2016-12 : 74543.60
+2017-01 : 18542.49
+2017-02 : 22978.81
+2017-03 : 51165.06
+2017-04 : 38679.77
+2017-05 : 56656.91
+2017-06 : 39724.49
+2017-07 : 38320.78
+2017-08 : 30542.20
+2017-09 : 69193.39
+2017-10 : 59583.03
+2017-11 : 79066.50
+2017-12 : 95739.12
+2018-01 : 43476.47
+2018-02 : 19921.00
+2018-03 : 58863.41
+2018-04 : 35541.91
+2018-05 : 43825.98
+2018-06 : 48190.73
+2018-07 : 44825.10
+2018-08 : 62837.85
+2018-09 : 86152.89
+2018-10 : 77448.13
+2018-11 : 117938.15
+2018-12 : 83030.39
