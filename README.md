@@ -21,6 +21,7 @@ Pandas, and NumPy together in one real pipeline.
 ## Project Structure
 ```
 sales-data-analysis-pipeline/
+├── assets/ # Chart images used in this README
 ├── data/
 │ ├── raw/ # Original CSV (not tracked — see Setup)
 │ └── processed/ # Cleaned data + summary CSV
@@ -70,16 +71,31 @@ Final outputs land in `data/processed/summary_report.csv` and `reports/sales_rep
 
 ---
 
+## Data Distribution
+
+![Orders by Category](assets/orders_by_category.png)
+
+Office Supplies has the highest order count, though Technology
+generates more total revenue per sale.
+
+![Sales Distribution](assets/sales_distribution.png)
+
+The right-skewed distribution confirms most sales are small, with a
+few high-value outliers pulling the mean above the median — a pattern
+also seen in the business analysis below (Question 5).
+
+---
+
 ## Business Questions & Analysis
 
 ### 1. Which product category drives the most revenue?
 
 **Technology** generates the highest revenue ($827,456), followed by
 Furniture ($728,659) and Office Supplies ($705,422) — despite Office
-Supplies having by far the most individual orders (confirmed in the
-exploratory notebook). This means Technology sells in lower volume but
-at a much higher price point per sale, while Office Supplies relies on
-high order frequency rather than big-ticket items.
+Supplies having by far the most individual orders (see the chart
+above). This means Technology sells in lower volume but at a much
+higher price point per sale, while Office Supplies relies on high
+order frequency rather than big-ticket items.
 
 ### 2. Which regions perform best, and is high revenue the same as high value-per-sale?
 
