@@ -93,12 +93,13 @@ ORDER BY unique_orders DESC;
 -- 8. Business Question:
 -- Which single order has the highest sales?
 -- ==========================================================
-SELECT *
+SELECT
+    "Order ID",
+    SUM(Sales) AS order_sales
 FROM sales
-WHERE Sales = (
-    SELECT MAX(Sales)
-    FROM sales
-);
+GROUP BY "Order ID"
+ORDER BY order_sales DESC, "Order ID" ASC
+LIMIT 1;
 
 
 -- ==========================================================
@@ -119,8 +120,8 @@ ORDER BY average_sales DESC;
 -- ==========================================================
 SELECT
     "Product Name",
-    COUNT(*) AS total_orders
+    COUNT(DISTINCT "Order ID") AS total_orders
 FROM sales
 GROUP BY "Product Name"
-ORDER BY total_orders DESC
+ORDER BY total_orders DESC, "Product Name" ASC
 LIMIT 5;

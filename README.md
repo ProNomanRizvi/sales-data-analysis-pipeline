@@ -75,8 +75,8 @@ Final outputs land in `data/processed/summary_report.csv` and `reports/sales_rep
 
 ![Orders by Category](assets/orders_by_category.png)
 
-Office Supplies has the highest order count, though Technology
-generates more total revenue per sale.
+Office Supplies has the most line items, though Technology
+generates more revenue per line item.
 
 ![Sales Distribution](assets/sales_distribution.png)
 
@@ -92,10 +92,10 @@ also seen in the business analysis below (Question 5).
 
 **Technology** generates the highest revenue ($827,456), followed by
 Furniture ($728,659) and Office Supplies ($705,422) — despite Office
-Supplies having by far the most individual orders (see the chart
+Supplies having by far the most line items (see the chart
 above). This means Technology sells in lower volume but at a much
-higher price point per sale, while Office Supplies relies on high
-order frequency rather than big-ticket items.
+higher price point per line item, while Office Supplies relies on high
+sales volume rather than big-ticket items.
 
 ### 2. Which regions perform best, and is high revenue the same as high value-per-sale?
 
@@ -115,14 +115,13 @@ highest revenue** of each year (e.g., Nov 2018: $117,938 — the single
 highest month across the whole dataset). This points to strong
 seasonal, holiday-driven demand rather than steady organic growth.
 
-### 4. Are premium shipping customers spending more per order?
+### 4. Do premium shipping modes have higher-value line items?
 
 Surprisingly, **no**. Average sale value across shipping modes is
 nearly flat: Second Class ($236.55), Same Day ($232.75), First Class
 ($230.23), and Standard Class ($228.85) are all within about $8 of
-each other. Customers don't appear to pay more per item when they
-choose faster shipping — shipping speed and order value are
-essentially unrelated in this dataset.
+each other. Faster shipping modes are not associated with meaningfully higher
+line-item sales values in this dataset.
 
 ### 5. Does a small number of customers or products account for a large share of revenue?
 
@@ -147,7 +146,9 @@ evenly across all sales.
   4,922 unique orders, because a single order can contain multiple
   line items (different products). All "total orders" metrics use
   the unique `Order ID` count, not row count, to avoid overstating
-  order volume.
+  order volume. The highest-sales-order query sums all line items by
+  `Order ID`, and product order counts deduplicate each product/order
+  pair.
 - **Dates required two different format strings** — the raw CSV uses
   `DD/MM/YYYY`, but once Pandas saves a cleaned CSV, dates round-trip
   back as `YYYY-MM-DD`. Each script that reads dates specifies the
